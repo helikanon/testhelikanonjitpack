@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
-
+/*
 publishing{
     publications{
         register<MavenPublication>("release"){
@@ -16,7 +16,7 @@ publishing{
             }
         }
     }
-}
+}*/
 
 
 android {
@@ -30,6 +30,11 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
