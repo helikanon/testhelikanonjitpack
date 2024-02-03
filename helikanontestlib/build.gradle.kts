@@ -4,6 +4,21 @@ plugins {
     id("maven-publish")
 }
 
+publishing{
+    publications{
+        register<MavenPublication>("release"){
+            groupId = "com.helikanonlibsample"
+            artifactId = "helikanontestlib"
+            version = "1.03"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
+
+
 android {
     namespace = "com.helikanonlibsample.helikanontestlib"
     compileSdk = 34
