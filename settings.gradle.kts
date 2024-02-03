@@ -10,7 +10,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io")
+        // maven(url = "https://jitpack.io")
+        maven {
+            url = uri("https://jitpack.io")
+            credentials {
+                username = "jp_ei43nusdabeipct1788b0vku4r"
+            }
+        }
     }
 }
 

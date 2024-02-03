@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
-/*
+
 publishing{
     publications{
         register<MavenPublication>("release"){
@@ -13,23 +13,6 @@ publishing{
 
             afterEvaluate {
                 from(components["release"])
-            }
-        }
-    }
-}*/
-
-
-afterEvaluate {
-    publishing{
-        publications{
-            register<MavenPublication>("release"){
-                groupId = "com.helikanonlibsample"
-                artifactId = "helikanontestlib"
-                version = "1.03"
-
-                afterEvaluate {
-                    from(components["release"])
-                }
             }
         }
     }
@@ -45,13 +28,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
+
+    /*
     publishing {
         singleVariant("release") {
             // if you don't want sources/javadoc, remove these lines
             withSourcesJar()
             withJavadocJar()
         }
-    }
+    }*/
 
     buildTypes {
         release {
