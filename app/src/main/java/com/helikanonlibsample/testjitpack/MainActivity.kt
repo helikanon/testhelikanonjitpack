@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        HelikanonTestLibTutorial.test1("Deneme")
+        HelikanonTestLibTutorial.test1("Denemee")
     }
 }
